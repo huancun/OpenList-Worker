@@ -39,7 +39,7 @@
     //   map（默认）- 整对象序列化为单个 JSON 键值，适合 KV/Blob
     //   key        - 分 key 存储，每实体一条记录（如 users_1）
     //   sql        - 关系表格式，与 Go 后端一致（适用于 D1/MySQL）
-    "DB_FORMAT": "map",
+    "DB_FORMAT": "sql",
 
     // 数据库驱动：
     //   auto（默认）- 自动检测，顺序 mysql → d1 → kv → cfkv → blob → do
@@ -59,10 +59,10 @@
     //   chacha20-poly1305        - ChaCha20-Poly1305（enc:v4:，RFC 8439，纯 JS）
     "DB_CIPHER": "none",
   },
-  "kv_namespaces": [
+  "d1_databases": [
     {
-      "binding": "KV",
-      "id": "d360c81cb34b4e2c94bd4ac5ee244e80"
+      "binding": "DB",
+      "database_id": "92eaf6a9-7c88-4449-8ddb-ae2eb68dbb7f"
     }
   ],
 }
